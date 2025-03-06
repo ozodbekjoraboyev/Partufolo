@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HomeComponents from "./home/page";
 import Link from "next/link";
+import ParticleCanvas from "./loading/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <div className="container flex justify-between max-w-[800px] m-auto">
+         <div className="container  text-4xl flex justify-between max-w-[800px] m-auto">
+       
         <Link href={"/home"}>
           <div>Home</div>
         </Link>
@@ -32,8 +34,9 @@ export default function RootLayout({ children }) {
           <div>Main</div>
         </Link>
         <Link href={"/about"}>
-          <div>About My</div>
+          <div>About Me</div>
         </Link>
+        
       </div>
         {children}
       </body>

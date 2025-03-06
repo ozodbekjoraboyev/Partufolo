@@ -1,4 +1,3 @@
-
 "use client";
 import { useEffect, useRef } from "react";
 
@@ -30,8 +29,7 @@ const ParticleCanvas = () => {
     }
 
     const animate = () => {
-      ctx.fillStyle = "#000"; // Oq fon
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       angle += 0.01;
       const sinAngle = Math.sin(angle);
@@ -57,8 +55,16 @@ const ParticleCanvas = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white">
-      <canvas ref={canvasRef} width={900} height={520} className="rounded-lg" />
+    <div className="relative flex justify-center items-center min-h-screen">
+      
+      <canvas ref={canvasRef} width={1400} height={700} className="absolute top-0 left-0 w-full h-full" />
+      
+      <div className="absolute text-center">
+        <p className="text-2xl cursor-pointer transition-all duration-300 hover:text-green-600 hover:scale-106">
+        Hello, my name is Ozodbek.
+        </p>
+      
+      </div>
     </div>
   );
 };

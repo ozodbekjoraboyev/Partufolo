@@ -28,6 +28,7 @@ function MainPage() {
           </span>
         </p>
       </div>
+      
     </div>
   );
 }
