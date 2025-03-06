@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import HomeComponents from "./home/page";
 import Link from "next/link";
 import ParticleCanvas from "./loading/page";
 
@@ -25,19 +24,20 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <div className="container  text-4xl flex justify-between max-w-[800px] m-auto">
-       
-        <Link href={"/home"}>
-          <div>Home</div>
-        </Link>
-        <Link href={"/main"}>
-          <div>Main</div>
-        </Link>
-        <Link href={"/about"}>
-          <div>About Me</div>
-        </Link>
-        
-      </div>
+        <div className="container  text-4xl flex justify-between max-w-[800px] m-auto">
+          <Link href={"/home"}>
+            <div>Home</div>
+          </Link>
+          <Link href={"/about"}>
+            <div>About Me</div>
+          </Link>{" "}
+          <Link href={"/profil"}>
+            <div>Projekts</div>
+          </Link>
+          <Link href={"/contakt"}>
+            <div>Contakt</div>
+          </Link>
+        </div>
         {children}
       </body>
     </html>
